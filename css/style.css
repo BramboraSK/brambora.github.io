@@ -5,6 +5,10 @@ body {
     color: #FFFFFF;
 }
 
+a {
+    color: seagreen;
+}
+
 h3 {
     font-family: 'Arial';
 }
