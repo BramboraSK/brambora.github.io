@@ -1,5 +1,10 @@
 /* Epický CSS súbor */
 
+body {
+    background-color: #121212;
+    color: #FFFFFF;
+}
+
 h3 {
     font-family: 'Arial';
 }
