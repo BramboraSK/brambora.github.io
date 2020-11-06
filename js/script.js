@@ -1,3 +1,9 @@
+// Popisovač
+const popis = () => {
+    fetch("../txt/sk_pm.txt")
+        .then(text => alert(text.text()));
+}
+
 // Test lásky
 const laska = (id) => {
     var percenta = Math.floor(Math.random() * 101);
