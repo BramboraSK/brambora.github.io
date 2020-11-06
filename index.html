@@ -21,17 +21,17 @@
     <!--Láska-->
     <div style="text-align: right;">
         <h3>Velice Pog test lásky:</h3>
-        <input type="text" placeholder="Prvé meno..."><br>
-        <input type="text" placeholder="Druhé meno..."><br>
-        <input type="submit" onclick="laska('percenta')" value="Vyhodnotiť!">
+        <input id="laska-input1" type="text" placeholder="Prvé meno..."><br>
+        <input id="laska-input2" type="text" placeholder="Druhé meno..."><br>
+        <input type="submit" onclick="laska('laska-input1', 'laska-input2', 'percenta')" value="Vyhodnotiť!">
         <p id="percenta"><br></p>
     </div>
 
     <!--Veštica-->
     <div>
         <h2>Epická veštica:</h2>
-        <input type="text" placeholder="Tvoja otázka..."><br>
-        <input type="submit" onclick="vestica('odpoved')" value="Spýtať sa!">
+        <input id="vestica-input" type="text" placeholder="Tvoja otázka..."><br>
+        <input type="submit" onclick="vestica('vestica-input', 'odpoved')" value="Spýtať sa!">
         <p id="odpoved"><br></p>
     </div>
 
