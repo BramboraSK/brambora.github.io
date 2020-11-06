@@ -12,7 +12,7 @@ const getHash = (input) => {
         hash = ((hash << 5) - hash) + input.charCodeAt(i);
         hash |= 0;
     }
-    return String(hash);
+    return hash;
 }
 
 
@@ -26,10 +26,10 @@ const popis = () => {
 
 // Test lásky
 const laska = (input1, input2, id) => {
-    input1 = document.getElementById(input1).value;
-    input2 = document.getElementById(input2).value;
+    hash1 = getHash(latinize(document.getElementById(input1).value).toLowerCase());
+    hash2 = getHash(latinize(document.getElementById(input2).value).toLowerCase());
 
-    var percenta = getHash(latinize((input1 + input2).toLowerCase())).slice(-2);
+    var percenta = String(hash1 + hash2).slice(-2);
     if(percenta[0] === "0") percenta = percenta[1];
 
     document.getElementById(id).innerHTML = `Títo dvaja sa milujú na ${percenta}%!`;
@@ -43,7 +43,7 @@ const vestica = (input, id) => {
 
     var odpovede = ["Áno!", "Samozrejme!", "Určite áno!", "Nie!", "Tak to ani náhódou!", "Určite nie!", "Neviem...", "Jasnačka!", "Niet šance!", "Vôbec netuším..."];
 
-    var cislo = Number(getHash(latinize(input.toLowerCase())).slice(-1));
+    var cislo = Number(String(getHash(latinize(input.toLowerCase()))).slice(-1));
     var odpoved = odpovede[cislo];
 
     document.getElementById(id).innerHTML = odpoved;
