@@ -1,7 +1,8 @@
 // Popisovač
 const popis = () => {
     fetch("../txt/sk_pm.txt")
-        .then(text => alert(text.text()));
+        .then(res => res.text())
+        .then(text => alert(text));
 }
 
 // Test lásky
