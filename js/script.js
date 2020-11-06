@@ -37,7 +37,6 @@ const laska = (input1, input2, id) => {
 
 // Veštica
 const vestica = (input, id) => {
-	console.log(1);
     input = document.getElementById(input).value;
 
     if(input.slice(-1) !== "?") input += "?";
@@ -46,7 +45,6 @@ const vestica = (input, id) => {
 
     var cislo = Number(getHash(latinize(input.toLowerCase())).slice(-1));
     var odpoved = odpovede[cislo];
-	console.log(2);
 
     document.getElementById(id).innerHTML = odpoved;
 }
