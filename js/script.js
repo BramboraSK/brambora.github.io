@@ -32,7 +32,7 @@ const laska = (input1, input2, id) => {
     hash2 = getHash(document.getElementById(input2).value.toLowerCase().latinize());
 
     var percenta = String(hash1 + hash2).slice(-3);
-    if(percenta[0] > 1 || percenta[0] === "0") percenta = percenta[1] + percenta[2];
+    if(percenta > 100 || percenta[0] === "0") percenta = percenta[1] + percenta[2];
     if(percenta !== "100") {
         if(percenta[0] === "0") percenta = percenta[1];
     }
@@ -48,7 +48,7 @@ const vestica = (input, id) => {
 
     var odpovede = ["Áno!", "Samozrejme!", "Určite áno!", "Nie!", "Tak to ani náhódou!", "Určite nie!", "Neviem...", "Jasnačka!", "Niet šance!", "Vôbec netuším..."];
 
-    var cislo = Number(String(getHash(latinize(input.toLowerCase()))).slice(-1));
+    var cislo = Number(String(getHash(input.toLowerCase().latinize())).slice(-1));
     var odpoved = odpovede[cislo];
 
     document.getElementById(id).innerHTML = odpoved;
