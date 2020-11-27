@@ -53,3 +53,28 @@ const vestica = (input, id) => {
 
     document.getElementById(id).innerHTML = odpoved;
 }
+
+// Trubky
+const vygenerujTrubky = (wID, hID) => {
+    var w = Number(document.getElementById(wID).value);
+    var h = Number(document.getElementById(hID).value);
+
+    const znaky = ["╔", "╗", "╚", "╝", "═", "║", "╦", "╩", "╣", "╠", "╬"];
+
+    var vygenerovane = [];
+    for(let i = 0; i < w * h; i++) {
+        vygenerovane.push(znaky[Math.floor(Math.random() * znaky.length)]);
+    }
+
+    var text = "";
+    for(let i = 0, y = 0; i < vygenerovane.length; i++, y++) {
+        if(y === w) {
+            text += "<br>";
+            y = 0;
+        }
+
+        text += vygenerovane[i];
+    }
+
+    document.getElementById("trubky").innerHTML = text;
+}

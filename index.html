@@ -17,7 +17,16 @@
     <meta property="og:description" content="Ja som Bramborova úžasná multifukčná stránka. Nájdeš tu tak dokonalé veci, že to ani ty nepochopíš." />
     <meta property="og:image" content="https://bramborova-uzasna-multifunkcna-stranka.tk/images/brambora.png" />
 </head>
-<body>
+<body onload="vygenerujTrubky(5, 5)">
+    <!-- Trubky -->
+    <div style="text-align: center;">
+        <h3>Generátor trubiek:</h3>
+        <input id="trubky-w" type="text" placeholder="Šírka"><br>
+        <input id="trubky-h" type="text" placeholder="Výška"><br>
+        <input type="submit" onclick="vygenerujTrubky('trubky-w', 'trubky-h')" value="Vygenerovať!">
+        <p id="trubky"><br></p>
+    </div>
+
     <!--Láska-->
     <div style="text-align: right;">
         <h3>Velice Pog test lásky:</h3>
